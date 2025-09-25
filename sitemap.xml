@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://cousin-he.github.io/data-pipelines/index.html</loc>
-    <lastmod>2025-09-24T09:21:09.746Z</lastmod>
+    <loc>https://cousin-he.github.io/data-pipelines/pipeline/index.html</loc>
+    <lastmod>2025-09-24T12:15:39.659Z</lastmod>
+  </url>
+  <url>
+    <loc>https://cousin-he.github.io/data-pipelines/germinate/index.html</loc>
+    <lastmod>2025-09-24T23:59:22.637Z</lastmod>
   </url>
   <url>
     <loc>https://cousin-he.github.io/data-pipelines/about.html</loc>
+    <lastmod>2025-09-24T09:21:09.746Z</lastmod>
+  </url>
+  <url>
+    <loc>https://cousin-he.github.io/data-pipelines/index.html</loc>
     <lastmod>2025-09-24T09:21:09.746Z</lastmod>
   </url>
 </urlset>
