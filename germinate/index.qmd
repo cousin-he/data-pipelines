@@ -181,10 +181,12 @@ On cell label "Associated data file version" (A18), inform a version number or i
 
 ##### 2.2.2.1	PUID
 A permanent unique identifier for the unambiguous identification of an accession in a plant genetic resource collection. Only DOIs are supported. If no DOI has been assigned to the accession in question, this field must remain empty.
+
 **Example value:**  (empty in this dataset, e.g., " 10.25642/IPK/GBIS/1420710")
 
 ##### 2.2.2.2	INSTCODE
 FAO WIEWS code denoting the institution where the accession is held, comprising a three-letter country code and a number. Mandatory.
+
 **Example value:**  USA022, GBR247, ESP004
 
 ##### 2.2.2.3	ACCENUMB
@@ -229,31 +231,38 @@ Additional taxonomic classification such as subspecies or variety.
 
 ##### 2.2.2.13	SUBTAUTHOR
 Authority name associated with the subtaxon.
+
 **Example value:**  Govorov, L.
 
 ##### 2.2.2.14	CROPNAME
 Common crop name.
+
 **Example value:**  Pea
 
 ##### 2.2.2.15	ACCENAME
 Registered or given name of the accession distinct from donor or collecting numbers, such as variety name or landrace name.
+
 **Example value:**  ARVEJAS AMARILLAS, CPI 135298, P.SATIVUM-ALBANIA
 
 ##### 2.2.2.16	ACQDATE
 Date accession was added to the collection, formatted YYYYMMDD. Missing days and months can be replaced with zeros or hyphens.
+
 **Example value:**  19350123, 19810801, 19780700, 1975----
 
 ##### 2.2.2.17	ORIGCTY
 Three-letter ISO country code denoting the accession’s country of origin. Please only use this field for material collected or bred in a certain country. Don’t use it to indicate the country a germplasm collection is located at.
+
 **Example value:**  VEN, IRN, ESP, TUR, USA
 
 
 ##### 2.2.2.18	COLLSITE
 Sub-national location details describing where the accession was collected.
+
 **Example value:**  Caracas, Tehran, Asturias; Asturias; Lena; Llanos de Someron
 
 ##### 2.2.2.19	DECLATITUDE
 Latitude coordinates in decimal degrees; positive north, negative south.
+
 **Example value:**  10.4943, 35.6892, -34.6037, 48.14
 
 ##### 2.2.2.20	LATITUDE
@@ -261,6 +270,7 @@ Latitude coordinates in degrees, minutes, seconds (DMS) format. Degrees (2 digit
 
 ##### 2.2.2.21	DECLONGITUDE
 Longitude in decimal degrees; positive east, negative west.
+
 **Example value:**  -66.9029, 51.389, -58.3816
 
 ##### 2.2.2.22	LONGITUDE
@@ -268,22 +278,27 @@ Longitude in DMS format. Degrees (3 digits), minutes (2 digits), and seconds (2 
 
 ##### 2.2.2.23	COORDUNCERT
 Estimated uncertainty of the coordinates in meters. Leave blank if unknown.
+
 **Example value:**  (blank) / 50 / 100
 
 ##### 2.2.2.24	COORDDATUM
 Datum or spatial reference system of the geographic coordinates.
+
 **Example value:**  WGS84, NAD83
 
 ##### 2.2.2.25	GEOREFMETH
 Method used to determine coordinates (GPS, map estimation, gazetteer, etc.).
+
 **Example value:**  GPS, gazetteer, estimated from map
 
 ##### 2.2.2.26	ELEVATION
 Height above sea level of the collection site in meters; negative allowed.
+
 **Example value:**  865, 161, 526, -15
 
 ##### 2.2.2.27	COLLDATE 
 Date sample was collected, formatted as YYYYMMDD.
+
 **Example value:**  19780700, 19810801, 19350123
 
 ##### 2.2.2.28	BREDCODE
@@ -292,10 +307,12 @@ Example value: ESP040, PRT005
 
 ##### 2.2.2.29	BREDNAME
 Name of breeding institute or breeder in case that no FAO WIEWS code is available.
+
 **Example value:**  "Fox, K.", "Dolan, D.D."
 
 ##### 2.2.2.30	SAMPSTAT
 Biological status code indicating accession type (wild, landrace, breeding material, etc.).
+
 **Example value:**  300 (traditional cultivar). Below there is a list of accepted CODE values:
 
 
