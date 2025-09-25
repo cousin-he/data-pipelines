@@ -1,0 +1,8 @@
+---
+title: "Data Pipeline"
+---
+
+# Data Pipeline
+
+This section will cover the data pipeline for the COUSIN project.
+Stay tuned for updates.
