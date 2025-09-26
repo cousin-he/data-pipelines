@@ -329,7 +329,7 @@ You can filter the type of data resources by, first, clicking on Filter icon (Se
 <section id="source" class="level5">
 <h5 class="anchored" data-anchor-id="source">2.2.1.8 Source</h5>
 <p>On cell label “Source” (<code>A9</code>), provide reference to any original or related resources from which this dataset is derived in value cell (<code>C9</code>). Include URLs or identifiers if applicable. Example:</p>
-<p><a href="https://www.mdpi.com/article/10.3390/plants13172454/s1”.">https://www.mdpi.com/article/10.3390/plants13172454/s1”</a>.</p>
+<p><a href="https://www.mdpi.com/article/10.3390/plants13172454/s1”.">“https://www.mdpi.com/article/10.3390/plants13172454/s1”</a>.</p>
 <hr>
 </section>
 <section id="type" class="level5">
@@ -770,20 +770,20 @@ Figure 8 - Overview of Metadata sheet
 </section>
 <section id="donorcode" class="level5">
 <h5 class="anchored" data-anchor-id="donorcode">2.2.2.33 DONORCODE</h5>
-<p><strong>FAO WIEWS code</strong> identifying the donor institution.<br>
-<strong>Example value:</strong> DEU146, NLD078, ESP040</p>
+<p>FAO WIEWS code identifying the donor institution.<br>
+<strong>Example value:</strong> <code>DEU146</code>, <code>NLD078</code>, <code>ESP040</code></p>
 <hr>
 </section>
 <section id="donorname" class="level5">
 <h5 class="anchored" data-anchor-id="donorname">2.2.2.34 DONORNAME</h5>
-<p>Name of the <strong>donor institute or person</strong> providing the accession in case that no FAO WIEWS code exists.<br>
+<p>Name of the donor institute or person providing the accession in case that no FAO WIEWS code exists.<br>
 <strong>Example value:</strong> “Van Soest, L.”, “Blixt, S.”</p>
 <hr>
 </section>
 <section id="donornumb" class="level5">
 <h5 class="anchored" data-anchor-id="donornumb">2.2.2.35 DONORNUMB</h5>
 <p>Accession number assigned by the donor.<br>
-<strong>Example value:</strong> “PIS 1162”, “WBH 2029”</p>
+<strong>Example value:</strong> <code>"PIS 1162"</code>, <code>"WBH 2029"</code></p>
 <hr>
 </section>
 <section id="othernumb" class="level5">
@@ -794,20 +794,20 @@ Figure 8 - Overview of Metadata sheet
 <section id="duplsite" class="level5">
 <h5 class="anchored" data-anchor-id="duplsite">2.2.2.37 DUPLSITE</h5>
 <p>FAO WIEWS code of institutes holding <strong>safety duplicates</strong> of the accession.<br>
-<strong>Example value:</strong> ESP040, NLD078</p>
+<strong>Example value:</strong> <code>ESP040</code>, <code>NLD078</code></p>
 <hr>
 </section>
 <section id="duplinstname" class="level5">
 <h5 class="anchored" data-anchor-id="duplinstname">2.2.2.38 DUPLINSTNAME</h5>
 <p>Names of institutes where safety duplicates are stored in case that no FAO WIEWS code exists.<br>
-<strong>Example value:</strong> “CGN”, “IPK”</p>
+<strong>Example value:</strong> <code>"CGN"</code>, <code>"IPK"</code></p>
 <hr>
 </section>
 <section id="storage" class="level5">
 <h5 class="anchored" data-anchor-id="storage">2.2.2.39 STORAGE</h5>
 <p>Type(s) of germplasm storage used (e.g., seed, cryopreservation).<br>
 Multiple types are allowed.<br>
-<strong>Example values:</strong> <code>10</code> (seed), <code>40</code> (cryopreserved)</p>
+<strong>Example values:</strong> <code>10</code> (seed), <code>40</code> (cryopreserved). Below there is a list of accepted CODE values:</p>
 <table class="table">
 <thead>
 <tr class="header">
@@ -854,7 +854,7 @@ Multiple types are allowed.<br>
 </section>
 <section id="mlsstate" class="level5">
 <h5 class="anchored" data-anchor-id="mlsstate">2.2.2.40 MLSSTATE</h5>
-<p>Status regarding inclusion in the <strong>Multilateral System of the International Treaty</strong>:</p>
+<p>Status regarding inclusion in the Multilateral System of the International Treaty:</p>
 <table class="table">
 <thead>
 <tr class="header">
@@ -877,7 +877,8 @@ Multiple types are allowed.<br>
 </section>
 <section id="remarks" class="level5">
 <h5 class="anchored" data-anchor-id="remarks">2.2.2.41 REMARKS</h5>
-<p>Additional notes or comments related to the accession, including explanations for “other” codes.</p>
+<p>Additional notes or comments related to the accession, including explanations for “other” codes.<br>
+This is a free text entry.</p>
 <hr>
 </section>
 </section>
@@ -915,7 +916,7 @@ Figure 9 - Phenotypes sheet of Trials
 <section id="short-name" class="level5">
 <h5 class="anchored" data-anchor-id="short-name">2.3.2.2 SHORT NAME</h5>
 <p>A shorter or abbreviated name for the phenotype variable, useful for compact display or referencing (Column B).<br>
-<strong>Example value:</strong> PH</p>
+<strong>Example value:</strong> <code>PH</code></p>
 <hr>
 </section>
 <section id="description-2" class="level5">
@@ -969,7 +970,7 @@ Figure 9 - Phenotypes sheet of Trials
 <section id="unit-abbreviation" class="level5">
 <h5 class="anchored" data-anchor-id="unit-abbreviation">2.3.2.6 UNIT ABBREVIATION</h5>
 <p>The abbreviated symbol for the measurement unit, if applicable (Column F).<br>
-<strong>Example value:</strong> cm</p>
+<strong>Example value:</strong> <code>cm</code></p>
 <hr>
 </section>
 <section id="unit-descriptions" class="level5">
@@ -981,7 +982,7 @@ Figure 9 - Phenotypes sheet of Trials
 <section id="traits-categories" class="level5">
 <h5 class="anchored" data-anchor-id="traits-categories">2.3.2.8 TRAITS CATEGORIES</h5>
 <p>Categories or groups that the trait belongs to, especially important for categorical variables, listing possible values (Column H). It means that if you have a trait with data type categorical and controlled values in a list you must set here the allowed values.<br>
-<strong>Example value:</strong> Colors of plant pods: Red, Green, White…</p>
+<strong>Example value:</strong> Colors of plant pods: “Red, Green, White”…</p>
 <hr>
 </section>
 <section id="min-only-for-numeric-traits-values" class="level5">
@@ -1046,19 +1047,13 @@ Figure 11 - Data sheet of trials
 <h5 class="anchored" data-anchor-id="block">2.3.4.3 BLOCK</h5>
 <p>The block number in which the experimental unit is placed (Column C).<br>
 <strong>Example value:</strong> <code>2</code></p>
-<table class="table">
-<colgroup>
-<col style="width: 5%">
-</colgroup>
-<tbody>
-<tr class="odd">
-<td>##### 2.3.4.4 ROW</td>
-</tr>
-<tr class="even">
-<td>The row number of the experimental unit within the block or field layout (Column D). <strong>Example value:</strong> <code>5</code></td>
-</tr>
-</tbody>
-</table>
+<hr>
+</section>
+<section id="row" class="level5">
+<h5 class="anchored" data-anchor-id="row">2.3.4.4 ROW</h5>
+<p>The row number of the experimental unit within the block or field layout (Column D).<br>
+<strong>Example value:</strong> <code>5</code></p>
+<hr>
 </section>
 <section id="column" class="level5">
 <h5 class="anchored" data-anchor-id="column">2.3.4.5 COLUMN</h5>
@@ -1098,7 +1093,7 @@ Figure 11 - Data sheet of trials
 <section id="experiment-id-first-column-with-trait-variables-and-values" class="level5">
 <h5 class="anchored" data-anchor-id="experiment-id-first-column-with-trait-variables-and-values">2.3.4.11 EXPERIMENT ID (FIRST COLUMN WITH TRAIT VARIABLES AND VALUES) …</h5>
 <p>Variable: A numeric identifier referring to the specific experiment (Column K). From column K and beyond you will enter your variables and respective values. The variables must be the same stated on Phenotype sheet.<br>
-<strong>Example value:</strong> <code>EXP_21</code></p>
+<strong>Example value:</strong> <code>EXP 21</code></p>
 <hr>
 </section>
 </section>
@@ -1161,7 +1156,7 @@ Figure 11 - Data sheet of trials
 <section id="email" class="level5">
 <h5 class="anchored" data-anchor-id="email">2.3.7.5 EMAIL</h5>
 <p>E-mail address of the author(s), researcher(s), scientist(s), or student(s) responsible for producing the information product (Column E).<br>
-<strong>Example value:</strong> diego.rubiales@…</p>
+<strong>Example value:</strong> <code>diego.rubiales@...</code></p>
 <hr>
 </section>
 <section id="phone" class="level5">
@@ -1173,7 +1168,7 @@ Figure 11 - Data sheet of trials
 <section id="contributor-institution" class="level5">
 <h5 class="anchored" data-anchor-id="contributor-institution">2.3.7.7 CONTRIBUTOR (INSTITUTION)</h5>
 <p>Author’s affiliation when the resource was created (Column G).<br>
-<strong>Example value:</strong> Institute for Sustainable Agriculture (CSIC)</p>
+<strong>Example value:</strong> <code>Institute for Sustainable Agriculture (CSIC)</code></p>
 <hr>
 </section>
 <section id="address" class="level5">
@@ -1185,7 +1180,7 @@ Figure 11 - Data sheet of trials
 <section id="country" class="level5">
 <h5 class="anchored" data-anchor-id="country">2.3.7.9 COUNTRY</h5>
 <p>The two-letter country code of the institution (<code>ISO 3166-1 alpha-2</code>) (Column I).<br>
-<strong>Example value:</strong> ES</p>
+<strong>Example value:</strong> <code>ES</code></p>
 <hr>
 </section>
 </section>
@@ -1304,7 +1299,7 @@ Figura 12 - Environmental Data and Variables examples
 </section>
 <section id="date" class="level5">
 <h5 class="anchored" data-anchor-id="date">2.4.3.2 DATE</h5>
-<p>Date the environmental variable was observed, formatted YYYYMMDD (Column B).<br>
+<p>Date the environmental variable was observed, formatted <code>YYYYMMDD</code> (Column B).<br>
 <strong>Example value:</strong> <code>1</code></p>
 <hr>
 </section>
@@ -1375,7 +1370,7 @@ Figure 16 - upload status on asynchronous box
 </figure>
 <!-- Texte à côté -->
 <div>
-<p>After uploading your data, the asynchronous box will display the processing status. If an error occurs during the upload, an error message will appear in this box,(View Feedback) informing you that there is an issue with the submitted data.</p>
+<p>After uploading your data, the asynchronous box will display the processing status. If an error occurs during the upload, an error message will appear in this box,(<code>View Feedback</code>) informing you that there is an issue with the submitted data.</p>
 <p>You can review the details provided to identify which parts of the template contain incorrect or missing information. This allows you to quickly pinpoint and correct the errors before attempting to upload the data again. If any help is needed you can contact the WP5 team and send the error report (fig.&nbsp;15) to allow our analyzes.</p>
 </div>
 </div>
@@ -1391,9 +1386,10 @@ Figure 17 - Error report visualization
 <section id="trialsclimate-data-upload" class="level3">
 <h3 class="anchored" data-anchor-id="trialsclimate-data-upload">3.4 Trials/Climate Data Upload</h3>
 <p>On trials upload there is a difference from MCPD. The “Dataset state” indicate the accessibility level of the dataset:</p>
-<p>• Public (blue button with an open lock icon): This setting means the dataset is accessible to all users without restrictions.</p>
-<p>• Private (blue button with a locked padlock icon): This restricts access to authorized users only, keeping the dataset confidential.</p>
-<p>• Hidden (blue button with an eye and strike-through icon): The dataset is concealed from general view and only accessible by specific users or administrators. Below these options, the green Upload and check button allows you to upload your dataset file and automatically verify its contents for errors or inconsistencies before making it available. The process is the same as MCPD.</p>
+<p>• <strong>Public</strong> (blue button with an open lock icon): This setting means the dataset is accessible to all users without restrictions.</p>
+<p>• <strong>Private</strong> (blue button with a locked padlock icon): This restricts access to authorized users only, keeping the dataset confidential.</p>
+<p>• <strong>Hidden</strong> (blue button with an eye and strike-through icon): The dataset is concealed from general view and only accessible by specific users or administrators.</p>
+<p>Below these options, the green Upload and check button allows you to upload your dataset file and automatically verify its contents for errors or inconsistencies before making it available. The process is the same as MCPD.</p>
 </section>
 </section>
 <section id="final-considerations" class="level2">
