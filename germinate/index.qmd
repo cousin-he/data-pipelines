@@ -613,6 +613,7 @@ Additional notes or comments related to the accession, including explanations fo
 
 ### 2.3 Trials Importation Template
 The purpose of this template is recording standardized plant trial information alongside measurements and other important data for plant material (accessions) used in the trial.
+
 •	Open the excel template file you downloaded called **trials-data.xlsx**
 
 #### 2.3.1 Trials Metadata Sheet
@@ -629,10 +630,10 @@ The purpose of this template is recording standardized plant trial information a
 •	Here is the sheet where you register the trait variables (phenotypes) that you are observing
 
 
-<div align="center">
-  <img src="Figure 9 - Phenotypes sheet of Trials.png" alt="Figure 9 - Phenotypes sheet of Trials" width="500"/>
-  <p><em>Figure 9 - Phenotypes sheet of Trials</em></p>
-</div>
+<figure style="text-align:center;">
+  <img src="Figure 9 - Phenotypes sheet of Trials.png" width="500"/>
+  <figcaption>Figure 9 - Phenotypes sheet of Trials</figcaption>
+</figure>
 
 ---
 
@@ -731,20 +732,24 @@ Indicates whether the trait is part of a timeseries dataset to be shown on Germi
 
 •	This sheet contains meta data information about the covering whole experiment and applies to every trait (without individual variation values). Inform the attribute name, data type and value (see image below)
 
-<div align="center">
-  <img src="Figure 10 - Additional attributes of germplasm.png" alt="Figure 10 - Additional attributes of germplasm" width="500"/>
-  <p><em>Figure 10 - Additional attributes of germplasm</em></p>
-</div>
+
+<figure style="text-align:center;">
+  <img src="Figure 10 - Additional attributes of germplasm.png" width="500"/>
+  <figcaption>Figure 10 - Additional attributes of germplasm</figcaption>
+</figure>
 
 
 #### 2.3.4	Trials Data Sheet
 
-<div align="center">
-  <img src="Figure 11 - Data sheet of trials.png" alt="Figure 11 - Data sheet of trials" width="500"/>
-  <p><emFigure 11 - Data sheet of trials</em></p>
-</div>
+
+
+<figure style="text-align:center;">
+  <img src="Figure 11 - Data sheet of trials.png" width="500"/>
+  <figcaption>Figure 11 - Data sheet of trials</figcaption>
+</figure>
 
 •	This sheet contains information about the observed trials data. The dynamic content columns start by column K, that means the trials variables from sheet Phenotypes should be listed from column K and then. 
+
 •	The most important on this sheet is the usage of accession numbers  of registered material (germplasm) on MCPD passport data (column Line/Phenotype).
 
 ---
@@ -836,7 +841,7 @@ Variable: A numeric identifier referring to the specific experiment (Column K). 
 
 #### 2.3.6	Attributes Sheet  
 
-•	This sheet contains information about the trial as a whole. This information is customizable and will set the data for all entries observed. Example: During the trials there was daily irrigation at 8am independent of the other trials measured or a specific treatment.
+•	This sheet contains information about the trial as a whole. This information is customizable and will set the data for all entries observed. Example: During the trials there was daily irrigation at `8am` independent of the other trials measured or a specific treatment.
 
 ---
 
@@ -986,13 +991,14 @@ The east-west geographic coordinate of the location, given in decimal degrees (C
 The purpose of this template is to record environmental data capturing specific information about the experiment location such as climate, applied treatments, and related contextual variables and event dates.
 
 
- <div align="center">
-  <img src="Figura 12 - Environmental Data and Variables examples.png" alt="Figura 12 - Environmental Data and Variables examples" width="500"/>
-  <p><em>Figura 12 - Environmental Data and Variables examples</em></p>
-</div>
+
+<figure style="text-align:center;">
+  <img src="Figura 12 - Environmental Data and Variables examples.png" width="500"/>
+  <figcaption>Figura 12 - Environmental Data and Variables examples</figcaption>
+</figure>
 
 
-•	Open the Excel template file you downloaded called environmental-data.xlsx
+•	Open the Excel template file you downloaded called **environmental-data.xlsx**
 
 #### 2.4.1	Environmental (Climate) Metadata Sheet
 •	Please refer to the Metadata information on MCPD file template. As mentioned before on this guide the Metadata sheet of the templates is the same.
@@ -1041,7 +1047,7 @@ The full name of the unit of measurement for the variable, if applicable. (Colum
 ##### 2.4.2.6	UNIT ABBREVIATION
 
 The abbreviated symbol for the measurement unit, if applicable (Column F).  
-**Example value:**  oC 
+**Example value:** ℃ 
 
 ---
 
@@ -1067,7 +1073,7 @@ The identifier or name of the location of the study.   (Column A)
 
 ##### 2.4.3.2	DATE
 
-Date the environmental variable was observed, formatted YYYYMMDD (Column B).    
+Date the environmental variable was observed, formatted `YYYYMMDD` (Column B).    
 **Example value:**  `1`  
 
 ---
@@ -1094,10 +1100,11 @@ This sheet has the information about the location where the experiment occurred.
 
 •	Sometimes, the files to be uploaded have a huge amount of information and are big file sized. The Germinate platform is prepared to deal with it by uploading and checking data in the background without blocking or interrupting the user interaction. 
 
-<div align="center">
-  <img src="Figure 13 - Data upload options on Germinate.png" alt="Figure 13 - Data upload options on Germinate" width="500"/>
-  <p><em>Figure 13 - Data upload options on Germinate</em></p>
-</div>
+
+<figure style="text-align:center;">
+  <img src="Figure 13 - Data upload options on Germinate.png" width="500"/>
+  <figcaption>Figure 13 - Data upload options on Germinate</figcaption>
+</figure>
 
 
 
@@ -1133,10 +1140,10 @@ The very first data upload will be the information about the material you used o
 •	In the bottom of the page an input file element will be available. Select your germplasm data importation file and click on Upload and Check button.
 
 
-<div align="center">
-  <img src="Figure 15 - Uploading MCPD data.png" alt="Figure 15 - Uploading MCPD data" width="500"/>
-  <p><em>Figure 15 - Uploading MCPD data</em></p>
-</div>
+<figure style="text-align:center;">
+  <img src="Figure 15 - Uploading MCPD data.png" width="500"/>
+  <figcaption>Figure 15 - Uploading MCPD data</figcaption>
+</figure>
 
 •	You will notice that you have a selection button to choose between insert new data (default) or in case you need to update information about any germplasm, and knowing the former accession number, you can pick the update option.
 
@@ -1169,10 +1176,11 @@ The very first data upload will be the information about the material you used o
 
 <br>
 
-<div align="center">
-  <img src="Figure 17 - Error report visualization.png" alt="Figure 17 - Error report visualization.png" width="500"/>
-  <p><em>Figure 17 - Error report visualization</em></p>
-</div>
+
+<figure style="text-align:center;">
+  <img src="Figure 17 - Error report visualization.png" width="500"/>
+  <figcaption>Figure 17 - Error report visualization</figcaption>
+</figure>
 
 ### 3.4	Trials/Climate Data Upload
 
