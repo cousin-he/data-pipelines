@@ -197,7 +197,7 @@ On cell label "Language" (`A8`), enter the language used in the dataset or docum
 ##### 2.2.1.8	Source
 On cell label "Source" (`A9`), provide reference to any original or related resources from which this dataset is derived in value cell (`C9`). Include URLs or identifiers if applicable. Example: 
 
-[https://www.mdpi.com/article/10.3390/plants13172454/s1”](https://www.mdpi.com/article/10.3390/plants13172454/s1”.).
+[“https://www.mdpi.com/article/10.3390/plants13172454/s1”](https://www.mdpi.com/article/10.3390/plants13172454/s1”.).
 
 
 ---
@@ -528,14 +528,14 @@ Source habitat from which the accession was collected (wild, farm, market, etc.)
 
 ##### 2.2.2.33 DONORCODE
 
-**FAO WIEWS code** identifying the donor institution.    
- **Example value:** DEU146, NLD078, ESP040
+FAO WIEWS code identifying the donor institution.    
+ **Example value:** `DEU146`, `NLD078`, `ESP040`
 
 ---
 
 ##### 2.2.2.34 DONORNAME
 
-Name of the **donor institute or person** providing the accession in case that no FAO WIEWS code exists.      
+Name of the donor institute or person providing the accession in case that no FAO WIEWS code exists.      
  **Example value:** "Van Soest, L.", "Blixt, S."
 
 ---
@@ -543,7 +543,7 @@ Name of the **donor institute or person** providing the accession in case that n
 ##### 2.2.2.35 DONORNUMB
 
 Accession number assigned by the donor.    
-**Example value:** "PIS 1162", "WBH 2029"
+**Example value:** `"PIS 1162"`, `"WBH 2029"`
 
 ---
 
@@ -557,14 +557,14 @@ INSTCODE:ACCENUMB;INSTCODE:identifier; INSTCODE and identifier are separated by 
 ##### 2.2.2.37 DUPLSITE
 
 FAO WIEWS code of institutes holding **safety duplicates** of the accession.    
-**Example value:** ESP040, NLD078
+**Example value:** `ESP040`, `NLD078`
 
 ---
 
 ##### 2.2.2.38 DUPLINSTNAME
 
 Names of institutes where safety duplicates are stored in case that no FAO WIEWS code exists.    
-**Example value:** "CGN", "IPK"
+**Example value:** `"CGN"`, `"IPK"`
 
 ---
 
@@ -572,7 +572,7 @@ Names of institutes where safety duplicates are stored in case that no FAO WIEWS
 
 Type(s) of germplasm storage used (e.g., seed, cryopreservation).  
 Multiple types are allowed.  
-**Example values:** `10` (seed), `40` (cryopreserved)
+**Example values:** `10` (seed), `40` (cryopreserved). Below there is a list of accepted CODE values:
 
 | Code | Description |
 |------|-------------|
@@ -590,7 +590,7 @@ Multiple types are allowed.
 
 ##### 2.2.2.40 MLSSTATE
 
-Status regarding inclusion in the **Multilateral System of the International Treaty**:
+Status regarding inclusion in the Multilateral System of the International Treaty:
 
 | Value | Description |
 |-------|-------------|
@@ -602,7 +602,7 @@ Status regarding inclusion in the **Multilateral System of the International Tre
 ##### 2.2.2.41 REMARKS
 
 Additional notes or comments related to the accession, including explanations for “other” codes.  
-
+This is a free text entry.
 
 ---
 
@@ -647,7 +647,7 @@ This is the full name or identifier of the trait variable used in the experiment
 ##### 2.3.2.2 SHORT NAME
 
 A shorter or abbreviated name for the phenotype variable, useful for compact display or referencing (Column B).    
-**Example value:** PH
+**Example value:** `PH`
 
 ---
 
@@ -682,7 +682,7 @@ The full name of the unit of measurement for the variable, if applicable (Column
 ##### 2.3.2.6 UNIT ABBREVIATION
 
 The abbreviated symbol for the measurement unit, if applicable (Column F).  
-**Example value:** cm
+**Example value:** `cm`
 
 ---
 
@@ -696,7 +696,7 @@ Additional information or clarifications about the units used. (Column G).
 ##### 2.3.2.8 TRAITS CATEGORIES
 
 Categories or groups that the trait belongs to, especially important for categorical variables, listing possible values (Column H).  It means that if you have a trait with data type categorical and controlled values in a list you must set here the allowed values.   
-**Example value:**  Colors of plant pods: Red, Green, White...
+**Example value:**  Colors of plant pods: "Red, Green, White"...
 
 ---
 
@@ -774,6 +774,7 @@ The block number in which the experimental unit is placed (Column C).
 **Example value:**  `2` 
 
 ---
+
 ##### 2.3.4.4	ROW
 
 The row number of the experimental unit within the block or field layout (Column D).    
@@ -825,7 +826,7 @@ The height above sea level of the experimental location, typically in meters (Co
 ##### 2.3.4.11	EXPERIMENT ID (FIRST COLUMN  WITH TRAIT VARIABLES AND VALUES) …
 
 Variable: A numeric identifier referring to the specific experiment (Column K).  From column K and beyond you will enter your variables and respective values. The variables must be the same stated on Phenotype sheet.  
-**Example value:**  `EXP_21`  
+**Example value:**  `EXP 21`  
 
 
 ---
@@ -904,7 +905,7 @@ An identifier for the data submitter. If the submitter is an individual, ORCID i
 ##### 2.3.7.5	EMAIL
 
 E-mail address of the author(s), researcher(s), scientist(s), or student(s) responsible for producing the information product (Column E).  
-**Example value:** diego.rubiales@...
+**Example value:** `diego.rubiales@...`
 
 ---
 
@@ -918,7 +919,7 @@ Phone number of the author(s), researcher(s), scientist(s), or student(s) respon
 ##### 2.3.7.7	CONTRIBUTOR (INSTITUTION)
 
 Author's affiliation when the resource was created (Column G).   
-**Example value:**  Institute for Sustainable Agriculture (CSIC)  
+**Example value:**  `Institute for Sustainable Agriculture (CSIC)`  
 
 
 ---
@@ -933,7 +934,7 @@ Address of the institution of affiliation when the resource was created (Column 
 ##### 2.3.7.9	COUNTRY
 
 The two-letter country code of the institution (`ISO 3166-1 alpha-2`) (Column I).    
-**Example value:**  ES
+**Example value:**  `ES`
 
 ---
 
@@ -1088,6 +1089,7 @@ This sheet has the information about the location where the experiment occurred.
 
 ---
 
+
 ## 3	Uploading Process
 
 ### 3.1	Data Uploader page
@@ -1161,7 +1163,7 @@ The very first data upload will be the information about the material you used o
 
   <!-- Texte à côté -->
   <div>
- After uploading your data, the asynchronous box will display the processing status. If an error occurs during the upload, an error message will appear in this box,(View Feedback) informing you that there is an issue with the submitted data. 
+ After uploading your data, the asynchronous box will display the processing status. If an error occurs during the upload, an error message will appear in this box,(`View Feedback`) informing you that there is an issue with the submitted data. 
 
  You can review the details provided to identify which parts of the template contain incorrect or missing information. This allows you to quickly pinpoint and correct the errors before attempting to upload the data again. If any help is needed you can contact the WP5 team and send the error report (fig. 15) to allow our analyzes. 
 
@@ -1186,11 +1188,13 @@ The very first data upload will be the information about the material you used o
 
 On trials upload there is a difference from MCPD. The "Dataset state" indicate the accessibility level of the dataset:
 
-•	Public (blue button with an open lock icon): This setting means the dataset is accessible to all users without restrictions.
+•	**Public** (blue button with an open lock icon): This setting means the dataset is accessible to all users without restrictions.
 
-•	Private (blue button with a locked padlock icon): This restricts access to authorized users only, keeping the dataset confidential.
+•	**Private** (blue button with a locked padlock icon): This restricts access to authorized users only, keeping the dataset confidential.
 
-•	Hidden (blue button with an eye and strike-through icon): The dataset is concealed from general view and only accessible by specific users or administrators.
+•	**Hidden** (blue button with an eye and strike-through icon): The dataset is concealed from general view and only accessible by specific users or administrators.
+
+
 Below these options, the green Upload and check button allows you to upload your dataset file and automatically verify its contents for errors or inconsistencies before making it available. The process is the same as MCPD.
 
 ## 4	Final considerations
