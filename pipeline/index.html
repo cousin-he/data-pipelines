@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -121,6 +155,31 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#data-pipeline" id="toc-data-pipeline" class="nav-link active" data-scroll-target="#data-pipeline">Data Pipeline</a></li>
+  <li><a href="#contents" id="toc-contents" class="nav-link" data-scroll-target="#contents">Contents</a></li>
+  <li><a href="#welcome" id="toc-welcome" class="nav-link" data-scroll-target="#welcome">1. Welcome</a>
+  <ul class="collapse">
+  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">Objectives</a></li>
+  </ul></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">2. Introduction</a>
+  <ul class="collapse">
+  <li><a href="#pipeline-architecture-overview" id="toc-pipeline-architecture-overview" class="nav-link" data-scroll-target="#pipeline-architecture-overview">Pipeline Architecture Overview</a></li>
+  <li><a href="#high-level-workflow" id="toc-high-level-workflow" class="nav-link" data-scroll-target="#high-level-workflow"><strong>High-Level Workflow</strong></a></li>
+  </ul></li>
+  <li><a href="#data-pipelines-in-cousin" id="toc-data-pipelines-in-cousin" class="nav-link" data-scroll-target="#data-pipelines-in-cousin">3. Data Pipelines in COUSIN</a>
+  <ul class="collapse">
+  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#stages-of-the-pipeline" id="toc-stages-of-the-pipeline" class="nav-link" data-scroll-target="#stages-of-the-pipeline">Stages of the Pipeline</a></li>
+  </ul></li>
+  <li><a href="#apache-airflow" id="toc-apache-airflow" class="nav-link" data-scroll-target="#apache-airflow">4. Apache Airflow</a>
+  <ul class="collapse">
+  <li><a href="#why-airflow" id="toc-why-airflow" class="nav-link" data-scroll-target="#why-airflow">Why Airflow?</a></li>
+  <li><a href="#core-concepts" id="toc-core-concepts" class="nav-link" data-scroll-target="#core-concepts">Core Concepts</a></li>
+  <li><a href="#example-dag" id="toc-example-dag" class="nav-link" data-scroll-target="#example-dag">Example DAG</a></li>
+  </ul></li>
+  <li><a href="#deployment" id="toc-deployment" class="nav-link" data-scroll-target="#deployment">5. Deployment</a>
+  <ul class="collapse">
+  <li><a href="#local-deployment-with-docker" id="toc-local-deployment-with-docker" class="nav-link" data-scroll-target="#local-deployment-with-docker">Local Deployment with Docker</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -148,9 +207,213 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="data-pipeline" class="level1">
 <h1>Data Pipeline</h1>
-<p>This section will cover the data pipeline for the COUSIN project. Stay tuned for updates.</p>
+</section>
+<section id="contents" class="level1">
+<h1>Contents</h1>
+<ol type="1">
+<li><a href="#Welcome">Welcome</a><br>
+</li>
+<li><a href="#Objectives">Objectives</a>
+<ul>
+<li><a href="#high-level-architecture">High-Level Architecture</a><br>
+</li>
+</ul></li>
+<li><a href="#data-pipelines-in-cousin">Data Pipelines in COUSIN</a>
+<ul>
+<li><a href="#Overview">Overview</a><br>
+</li>
+<li><a href="#stages-of-the-pipeline">Stages of the Pipeline</a><br>
+</li>
+</ul></li>
+<li><a href="#apache-airflow">Apache Airflow</a>
+<ul>
+<li><a href="#why-airflow">Why Airflow?</a><br>
+</li>
+<li><a href="#core-concepts">Core Concepts</a><br>
+</li>
+<li><a href="#example-dag">Example DAG</a></li>
+</ul></li>
+<li><a href="#deployment">Deployment</a>
+<ul>
+<li><a href="#local-deployment-with-docker">Local Deployment with Docker</a></li>
+</ul></li>
+</ol>
+</section>
+<section id="welcome" class="level1">
+<h1>1. Welcome</h1>
+<p>This documentation provides a comprehensive guide for the <strong>COUSIN project</strong>, focusing on building, deploying, and maintaining <strong>data pipelines</strong> using <strong>Apache Airflow</strong>.</p>
+<section id="objectives" class="level2">
+<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
+<ul>
+<li>Automate data workflows for biological datasets.</li>
+<li>Ensure reproducibility and scalability.</li>
+<li>Integrate with machine learning research, including dimensionality reduction and clustering techniques.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>COUSIN WP5 focuses on infrastructure and data management, where this documentation plays a key role in delivering high-quality data resources.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="introduction" class="level1">
+<h1>2. Introduction</h1>
+<p>The <strong>COUSIN Project</strong> aims to improve the automation and management of biological data for similarity search research.<br>
+This documentation serves as a guide for:</p>
+<ul>
+<li>Handling <strong>large biological datasets</strong>.</li>
+<li>Automating preprocessing and analysis workflows.</li>
+<li>Ensuring <strong>reproducibility</strong> of experiments.</li>
+<li>Supporting machine learning models such as <strong>dimensionality reduction</strong> and <strong>clustering</strong>.</li>
+</ul>
+<p>Pipelines are orchestrated using <strong>Apache Airflow</strong>, which ensures that every step is executed in the correct order and at the right time.</p>
+<hr>
+<section id="pipeline-architecture-overview" class="level2">
+<h2 class="anchored" data-anchor-id="pipeline-architecture-overview">Pipeline Architecture Overview</h2>
+<p>The pipeline used in the COUSIN project is <strong>modular</strong>, meaning each stage is independent but connected through dependencies.</p>
+</section>
+<section id="high-level-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="high-level-workflow"><strong>High-Level Workflow</strong></h2>
+<pre class="mermaid"><code>flowchart TD
+    A[Raw Biological Data Sources] --&gt;|Data Ingestion| B[Preprocessing]
+    B --&gt;|Cleaned Data| C[Feature Engineering]
+    C --&gt;|Optimized Dataset| D[Dimensionality Reduction]
+    D --&gt;|Reduced Features| E[Clustering and Analysis]
+    E --&gt;|Grouped Data| F[Similarity Models]
+    F --&gt;|Results| G[Reports and Visualization]</code></pre>
+<hr>
+</section>
+</section>
+<section id="data-pipelines-in-cousin" class="level1">
+<h1>3. Data Pipelines in COUSIN</h1>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>The data pipeline automates processes for: - Data ingestion - Preprocessing - Feature engineering - Model generation - Reporting</p>
+</section>
+<section id="stages-of-the-pipeline" class="level2">
+<h2 class="anchored" data-anchor-id="stages-of-the-pipeline">Stages of the Pipeline</h2>
+<table class="table">
+<colgroup>
+<col style="width: 62%">
+<col style="width: 37%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Stage</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Ingestion</strong></td>
+<td>Load biological datasets from multiple sources.</td>
+</tr>
+<tr class="even">
+<td><strong>Preprocessing</strong></td>
+<td>Clean, normalize, and transform data.</td>
+</tr>
+<tr class="odd">
+<td><strong>Dimensionality Reduction</strong></td>
+<td>Apply techniques to reduce feature space.</td>
+</tr>
+<tr class="even">
+<td><strong>Clustering</strong></td>
+<td>Group similar data points.</td>
+</tr>
+<tr class="odd">
+<td><strong>Export &amp; Reporting</strong></td>
+<td>Save processed data and generate outputs.</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="apache-airflow" class="level1">
+<h1>4. Apache Airflow</h1>
+<section id="why-airflow" class="level2">
+<h2 class="anchored" data-anchor-id="why-airflow">Why Airflow?</h2>
+<p>Apache Airflow is used for orchestrating workflows, enabling us to: - Schedule complex tasks - Manage dependencies - Monitor pipelines in real time</p>
+</section>
+<section id="core-concepts" class="level2">
+<h2 class="anchored" data-anchor-id="core-concepts">Core Concepts</h2>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Concept</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>DAG</strong></td>
+<td>Directed Acyclic Graph representing workflow.</td>
+</tr>
+<tr class="even">
+<td><strong>Task</strong></td>
+<td>Individual operation inside a DAG.</td>
+</tr>
+<tr class="odd">
+<td><strong>Operator</strong></td>
+<td>Template for creating tasks.</td>
+</tr>
+<tr class="even">
+<td><strong>Executor</strong></td>
+<td>Defines how tasks are executed (e.g., LocalExecutor).</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="example-dag" class="level2">
+<h2 class="anchored" data-anchor-id="example-dag">Example DAG</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> airflow <span class="im">import</span> DAG</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> airflow.operators.python <span class="im">import</span> PythonOperator</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datetime <span class="im">import</span> datetime</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> preprocess():</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Preprocessing biological dataset..."</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> DAG(</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'cousin_preprocessing'</span>,</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    start_date<span class="op">=</span>datetime(<span class="dv">2025</span>, <span class="dv">1</span>, <span class="dv">1</span>),</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    schedule_interval<span class="op">=</span><span class="st">'@daily'</span>,</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    catchup<span class="op">=</span><span class="va">False</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>) <span class="im">as</span> dag:</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    task <span class="op">=</span> PythonOperator(</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>        task_id<span class="op">=</span><span class="st">'preprocess_dataset'</span>,</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>        python_callable<span class="op">=</span>preprocess</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="deployment" class="level1">
+<h1>5. Deployment</h1>
+<section id="local-deployment-with-docker" class="level2">
+<h2 class="anchored" data-anchor-id="local-deployment-with-docker">Local Deployment with Docker</h2>
+<ol type="1">
+<li>Install Docker and Docker Compose.</li>
+<li>Create a folder <code>airflow</code> with subdirectories:</li>
+</ol>
+<p>airflow/</p>
+<p>├─ dags/</p>
+<p>├─ logs/</p>
+<p>└─ plugins/</p>
+<ol start="3" type="1">
+<li>Start Airflow:</li>
+</ol>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">docker-compose</span> up</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="4" type="1">
+<li>Access the UI at http://localhost:8080 .</li>
+</ol>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

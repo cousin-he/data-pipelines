@@ -1,10 +1,66 @@
 [
   {
-    "objectID": "pipeline/index.html",
-    "href": "pipeline/index.html",
+    "objectID": "pipeline/index.html#objectives",
+    "href": "pipeline/index.html#objectives",
     "title": "Data Pipeline",
-    "section": "",
-    "text": "Data Pipeline\nThis section will cover the data pipeline for the COUSIN project. Stay tuned for updates."
+    "section": "Objectives",
+    "text": "Objectives\n\nAutomate data workflows for biological datasets.\nEnsure reproducibility and scalability.\nIntegrate with machine learning research, including dimensionality reduction and clustering techniques.\n\n\n\n\n\n\n\nTip\n\n\n\nCOUSIN WP5 focuses on infrastructure and data management, where this documentation plays a key role in delivering high-quality data resources."
+  },
+  {
+    "objectID": "pipeline/index.html#pipeline-architecture-overview",
+    "href": "pipeline/index.html#pipeline-architecture-overview",
+    "title": "Data Pipeline",
+    "section": "Pipeline Architecture Overview",
+    "text": "Pipeline Architecture Overview\nThe pipeline used in the COUSIN project is modular, meaning each stage is independent but connected through dependencies."
+  },
+  {
+    "objectID": "pipeline/index.html#high-level-workflow",
+    "href": "pipeline/index.html#high-level-workflow",
+    "title": "Data Pipeline",
+    "section": "High-Level Workflow",
+    "text": "High-Level Workflow\nflowchart TD\n    A[Raw Biological Data Sources] --&gt;|Data Ingestion| B[Preprocessing]\n    B --&gt;|Cleaned Data| C[Feature Engineering]\n    C --&gt;|Optimized Dataset| D[Dimensionality Reduction]\n    D --&gt;|Reduced Features| E[Clustering and Analysis]\n    E --&gt;|Grouped Data| F[Similarity Models]\n    F --&gt;|Results| G[Reports and Visualization]"
+  },
+  {
+    "objectID": "pipeline/index.html#overview",
+    "href": "pipeline/index.html#overview",
+    "title": "Data Pipeline",
+    "section": "Overview",
+    "text": "Overview\nThe data pipeline automates processes for: - Data ingestion - Preprocessing - Feature engineering - Model generation - Reporting"
+  },
+  {
+    "objectID": "pipeline/index.html#stages-of-the-pipeline",
+    "href": "pipeline/index.html#stages-of-the-pipeline",
+    "title": "Data Pipeline",
+    "section": "Stages of the Pipeline",
+    "text": "Stages of the Pipeline\n\n\n\n\n\n\n\nStage\nDescription\n\n\n\n\nIngestion\nLoad biological datasets from multiple sources.\n\n\nPreprocessing\nClean, normalize, and transform data.\n\n\nDimensionality Reduction\nApply techniques to reduce feature space.\n\n\nClustering\nGroup similar data points.\n\n\nExport & Reporting\nSave processed data and generate outputs."
+  },
+  {
+    "objectID": "pipeline/index.html#why-airflow",
+    "href": "pipeline/index.html#why-airflow",
+    "title": "Data Pipeline",
+    "section": "Why Airflow?",
+    "text": "Why Airflow?\nApache Airflow is used for orchestrating workflows, enabling us to: - Schedule complex tasks - Manage dependencies - Monitor pipelines in real time"
+  },
+  {
+    "objectID": "pipeline/index.html#core-concepts",
+    "href": "pipeline/index.html#core-concepts",
+    "title": "Data Pipeline",
+    "section": "Core Concepts",
+    "text": "Core Concepts\n\n\n\nConcept\nDescription\n\n\n\n\nDAG\nDirected Acyclic Graph representing workflow.\n\n\nTask\nIndividual operation inside a DAG.\n\n\nOperator\nTemplate for creating tasks.\n\n\nExecutor\nDefines how tasks are executed (e.g., LocalExecutor)."
+  },
+  {
+    "objectID": "pipeline/index.html#example-dag",
+    "href": "pipeline/index.html#example-dag",
+    "title": "Data Pipeline",
+    "section": "Example DAG",
+    "text": "Example DAG\nfrom airflow import DAG\nfrom airflow.operators.python import PythonOperator\nfrom datetime import datetime\n\ndef preprocess():\n    print(\"Preprocessing biological dataset...\")\n\nwith DAG(\n    'cousin_preprocessing',\n    start_date=datetime(2025, 1, 1),\n    schedule_interval='@daily',\n    catchup=False\n) as dag:\n    task = PythonOperator(\n        task_id='preprocess_dataset',\n        python_callable=preprocess\n    )"
+  },
+  {
+    "objectID": "pipeline/index.html#local-deployment-with-docker",
+    "href": "pipeline/index.html#local-deployment-with-docker",
+    "title": "Data Pipeline",
+    "section": "Local Deployment with Docker",
+    "text": "Local Deployment with Docker\n\nInstall Docker and Docker Compose.\nCreate a folder airflow with subdirectories:\n\nairflow/\n├─ dags/\n├─ logs/\n└─ plugins/\n\nStart Airflow:\n\ndocker-compose up\n\nAccess the UI at http://localhost:8080 ."
   },
   {
     "objectID": "germinate/index.html",
@@ -46,13 +102,34 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site"
+    "text": "The COUSIN Project (EU Horizon research) focuses on:\n\nManaging and integrating large biological datasets.\nBuilding reproducible data pipelines.\nSupporting advanced machine learning methods such as dimensionality reduction and similarity search.\n\nThis workshop website is part of WP5 (Infrastructure & Data Management) and is maintained to provide high-quality resources for the research community."
+  },
+  {
+    "objectID": "about.html#about-cousin",
+    "href": "about.html#about-cousin",
+    "title": "About",
+    "section": "",
+    "text": "The COUSIN Project (EU Horizon research) focuses on:\n\nManaging and integrating large biological datasets.\nBuilding reproducible data pipelines.\nSupporting advanced machine learning methods such as dimensionality reduction and similarity search.\n\nThis workshop website is part of WP5 (Infrastructure & Data Management) and is maintained to provide high-quality resources for the research community."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "data-pipelines",
+    "title": "COUSIN Workshop",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "Welcome to the COUSIN Workshop Website.\nThis platform gathers all the documentation and tutorials required for researchers, engineers, and students working on the COUSIN project.\nIt is designed to support two main areas:\n\nGerminate Data Importation → for biological dataset management.\nData Pipelines & Airflow → for automation, reproducibility, and scalability of workflows.\n\n\n\n\n\n\nLearn how to prepare and upload data into Germinate using templates and structured processes.\nThis section covers:\n\nBefore you start\nTemplate files (Passport, Trials, Environmental data)\nUploading process\nFinal considerations\n\n👉 Read the Guide\n\n\n\n\nUnderstand how data pipelines are designed and orchestrated with Apache Airflow in the COUSIN project.\nThis section covers:\n\nObjectives and high-level architecture\nPipeline stages (ETL)\nApache Airflow concepts and example DAGs\nDeployment with Docker\n\n👉 Explore the Pipelines\n\n\n\n\n\nThis workshop is part of COUSIN WP5 efforts, led by:\n\nJosé Felipe Ortega Soto (WP leader)\nStephan Weise (WP Leader)\n\n\n📌 Use the navigation bar or links above to access the specific guides."
+  },
+  {
+    "objectID": "index.html#workshop-contents",
+    "href": "index.html#workshop-contents",
+    "title": "COUSIN Workshop",
+    "section": "",
+    "text": "Learn how to prepare and upload data into Germinate using templates and structured processes.\nThis section covers:\n\nBefore you start\nTemplate files (Passport, Trials, Environmental data)\nUploading process\nFinal considerations\n\n👉 Read the Guide\n\n\n\n\nUnderstand how data pipelines are designed and orchestrated with Apache Airflow in the COUSIN project.\nThis section covers:\n\nObjectives and high-level architecture\nPipeline stages (ETL)\nApache Airflow concepts and example DAGs\nDeployment with Docker\n\n👉 Explore the Pipelines"
+  },
+  {
+    "objectID": "index.html#acknowledgment",
+    "href": "index.html#acknowledgment",
+    "title": "COUSIN Workshop",
+    "section": "",
+    "text": "This workshop is part of COUSIN WP5 efforts, led by:\n\nJosé Felipe Ortega Soto (WP leader)\nStephan Weise (WP Leader)\n\n\n📌 Use the navigation bar or links above to access the specific guides."
   }
 ]
