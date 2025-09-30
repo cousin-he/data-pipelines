@@ -12,9 +12,9 @@ This platform gathers all the documentation and tutorials required for researche
 
 It is designed to support two main areas:
 
-1. **Germinate Data Importation** → for biological dataset management.  
+1. 🌿 **Germinate Data Importation** → for biological dataset management.  
 
-2. **Data Pipelines & Airflow** → for automation, reproducibility, and scalability of workflows.  
+2. ⚙️ **Data Pipelines & Airflow** → for automation, reproducibility, and scalability of workflows.  
 
 ---
 
@@ -25,13 +25,13 @@ Learn how to prepare and upload data into **Germinate** using templates and stru
 
 This section covers:
 
-- Before you start 
+- ✅ Before you start 
 
-- Template files (Passport, Trials, Environmental data)  
+- 📂 Template files (Passport, Trials, Environmental data)  
 
-- Uploading process  
+- ⬆️ Uploading process  
 
-- Final considerations  
+- 📝 Final considerations  
 
 👉 [Read the Guide](https://cousin-he.github.io/data-pipelines/germinate/)
 
@@ -42,13 +42,13 @@ Understand how **data pipelines** are designed and orchestrated with **Apache Ai
 
 This section covers:
 
-- Objectives and high-level architecture  
+- 🎯 Objectives and high-level architecture  
 
-- Pipeline stages (ETL)  
+- 🔄 Pipeline stages (ETL)  
 
-- Apache Airflow concepts and example DAGs  
+- 🧩 Apache Airflow concepts and example DAGs  
 
-- Deployment with Docker  
+- 🐳 Deployment with Docker  
 
 👉 [Explore the Pipelines](https://cousin-he.github.io/data-pipelines/pipeline/)
 
@@ -57,7 +57,7 @@ This section covers:
 
 
 
-## Acknowledgment
+## 🙌 Acknowledgment
 This workshop is part of **COUSIN WP5** efforts, led by:  
   
 - **José Felipe Ortega Soto** (WP leader) 
