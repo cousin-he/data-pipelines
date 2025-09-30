@@ -33,7 +33,7 @@ This section covers:
 
 - Final considerations  
 
-👉 [Read the Guide](germinate.qmd)
+👉 [Read the Guide](https://cousin-he.github.io/data-pipelines/germinate/)
 
 ---
 
@@ -50,7 +50,7 @@ This section covers:
 
 - Deployment with Docker  
 
-👉 [Explore the Pipelines](pipeline.qmd)
+👉 [Explore the Pipelines](https://cousin-he.github.io/data-pipelines/pipeline/)
 
 ---
 
