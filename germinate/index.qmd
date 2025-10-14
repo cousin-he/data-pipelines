@@ -18,7 +18,11 @@ title: "Germinate Data Importation User Guide"
 ## 1. Before you start
 Our goal with this manual is to help you understand how to prepare and import your experimental data effectively enabling your research outputs to be accessible and integrated within the COUSIN stakeholders via Germinate.
 This guide does not cover all features of Germinate. Instead, it provides step-by-step instructions tailored to ensure you can successfully complete the official project’s upload templates with your COUSIN-related datasets and then make it available to the Germinate audience.
-Before you start, we expect that you are already familiar with concept of Germinate platform and its general purpose regarding COUSIN project targets. If you are interested in a fully training on Germinate, an official training resource is available here: [https://germinateplatform.github.io/germinate-training/](https://germinateplatform.github.io/germinate-training/)
+Before you start, we expect that you are already familiar with concept of Germinate platform and its general purpose regarding COUSIN project targets. 
+
+::: {.callout-tip}
+If you are interested in a fully training on Germinate, an official training resource is available here: [https://germinateplatform.github.io/germinate-training/](https://germinateplatform.github.io/germinate-training/)
+:::
 
 ## 2.	Template Files
 COUSIN’s Germinate supports data uploads using specific Excel templates, along with a few options for text-based data templates and even images uploads. Detailed information on how to correctly complete these templates is available within the **Data Uploader** section, located under the **User Advanced Settings** menu. This feature (Upload Data) is accessible to users <u>with the appropriate upload permissions</u> . Additionally, a [direct link](https://cousin.ipk-gatersleben.de/templates) to the templates can be found in the Data Resources link, providing <u>easy access for any user</u>. The templates are store together with other data resources of the project but with this link they are filtered among the others.
