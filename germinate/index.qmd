@@ -85,22 +85,22 @@ Users with the Curator role are authorized to upload data into COUSIN's Germinat
   <!-- Image avec légende -->
   <figure style="margin: 0; text-align: center;">
     <img src="Figure 6 - Left Menu, Data Resources.png" width="300"/>
-    <figcaption style="font-size: small;">Figure 6 - Left Menu, Data Resources</figcaption>
+    <figcaption>Figure 6 - Left Menu, Data Resources</figcaption>
   </figure>
 
   <!-- Texte à côté -->
   <div>
-  •   Even being a regular user, you being a regular user, you have access to the Data resources and Templates. The easiest way to access it is through the following URL:
+  Even being a regular user, you being a regular user, you have access to the Data resources and Templates. The easiest way to access it is through the following URL:
 
-  [https://cousin.ipk-gatersleben.de/templates](https://cousin.ipk-gatersleben.de/templates)
+  <a href="https://cousin.ipk-gatersleben.de/templates" target="_blank" rel="noopener noreferrer">https://cousin.ipk-gatersleben.de/templates</a>
 
   This URL will redirect you directly to the importation templates (see Figure 5).
 
-  •   Other way to reach the templates is by clicking the left menu, **Section Data**, subpage **Data Resources**.
+  Other way to reach the templates is by clicking the left menu, **Section Data**, subpage **Data Resources**.
 
-  •  Note that by accessing Data Resources page you will be presented to all type of data resources already available among the project scope. By going this way, the importation templates will be available and you can download it.
+  Note that by accessing Data Resources page you will be presented to all type of data resources already available among the project scope. By going this way, the importation templates will be available and you can download it.
 
-  •  It’s recommended filter the template files just to avoid other data resources.
+  It’s recommended filter the template files just to avoid other data resources.
 
   You can filter the type of data resources by, first, clicking on Filter icon (See Figure 7). A dialog box will appear. Select filter by: Type Name, the operator Equal and type Template in the input text. Click in OK button. By doing it only the template files will be shown among the other platform data resources.
   </div>
@@ -152,25 +152,28 @@ On cell label "Title" (`A2`), enter a distinct name for your data resource in th
 
 On cell label "Description" (`A3`), provide a summary or overview of what the resource contains in the value cell (`C3`). This can include abstracts, outlines, or free-text explanations describing the scope of the data. For instance, “Passport Data of Pea Accessions.” **The description is mandatory**.
 
----
+
 
 ##### 2.2.1.3	Rights
 
-On cell label "Rights" (`A4`), specify statements about ownership, usage permissions, or licensing in value cell (`C4`). An example entry would be “Creative Commons Attribution `4.0` International Public License  ”. Below a list of platform suggestion of licenses (there is support for custom licenses too)
+On cell label "Rights" (`A4`), specify statements about ownership, usage permissions, or licensing in value cell (`C4`). An example entry would be “Creative Commons Attribution `4.0` International Public License  ”. Below a list of platform suggestion of licenses (there is support for custom licenses too).
 
-•	Creative Commons Attribution `4.0` International Public License
+- Creative Commons Attribution 4.0 International Public License
+- Creative Commons Attribution-ShareAlike 4.0 International Public License
+- Creative Commons Attribution-NoDerivatives 4.0 International Public License
+- Creative Commons Attribution-NonCommercial 4.0 International Public License
+- Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License
+- Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International Public License
 
-•	Creative Commons Attribution-ShareAlike `4.0` International Public License
+::: {.callout-note}
+If you don't know how to classify the license for your data, the suggested one for COUSIN project is **Creative Commons Attribution 4.0 International Public License** (CC BY 4.0). This license allows anyone to use, share and adapt your data, but requires the attribution to you as original creator. 
 
-•	Creative Commons Attribution-NoDerivatives `4.0` International Public License
+<figure><img src="cc_by.png" alt="by" border="0" width="100"></figure>
 
-•	Creative Commons Attribution-NonCommercial `4.0` International Public License
+For more details <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">read the license deed</a>.
+:::
 
-•	Creative Commons Attribution-NonCommercial-ShareAlike `4.0` International Public License
 
-•	Creative Commons Attribution-NonCommercial-NoDerivatives `4.0 `Intern. Public License
-
----
 
 ##### 2.2.1.4	Date of Creation
 On cell label "Date of creation" (`A5`), inform the date or time span when the file was created or made available in value cell (`C5`). Use standardized date formatting such as `ISO 8601 (YYYY-MM-DD)`. For example, `“2023-11-15”`.
